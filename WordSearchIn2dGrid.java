@@ -47,24 +47,12 @@ public class WordSearchIn2dGrid {
         if (word.isEmpty()) {
             return true;
         }
-        int len = word.length();
-        List<List<Pair<Integer, Integer>>> table = new ArrayList<>();
-        for (int i = 0; i < 256; i++)
-            table.add(new ArrayList<>());
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                table.get(board[i][j]).add(new Pair<>(i, j));
-            }
-        }
         visited = new boolean[n][m];
         for (int row = 0; row < n; row++) {
             for (int col = 0; col < m; col++) {
-                visited[row][col] = false;
+                if((board[row][col] == word.charAt(0)) && searchUtil(board, word, row,col, 0 , n,m))
+                    return true;
             }
-        }
-        for (int i = 0; i < table.get(word.charAt(0)).size(); i++) {
-            if (searchUtil(board, word, table.get(word.charAt(0)).get(i).getKey(), table.get(word.charAt(0)).get(i).getValue(), 0, n, m))
-                return true;
         }
         return false;
     }
