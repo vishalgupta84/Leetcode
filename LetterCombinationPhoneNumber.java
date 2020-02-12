@@ -1,4 +1,7 @@
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class LetterCombinationPhoneNumber {
     public List<String> letterCombinations(String digits) {
         List<String> ans = new ArrayList<>();
         int n = digits.length();

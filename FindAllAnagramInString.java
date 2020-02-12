@@ -1,4 +1,7 @@
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class FindAllAnagramInString {
     public boolean match(int[] pattern, int[] temp) {
         for(int i=0;i<26;i++)
             if(pattern[i] != temp[i])

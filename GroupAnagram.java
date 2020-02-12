@@ -1,4 +1,6 @@
-class JumpGroup {
+import java.util.*;
+
+class GroupAnagram {
     public List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> ans = new ArrayList<>();
 		HashMap<String, List<String>> map = new HashMap<>();
