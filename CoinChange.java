@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class CoinChange {
     public int coinChange(int[] coins, int amount) {
         int[] table = new int[amount+1];

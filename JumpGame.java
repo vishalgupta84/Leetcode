@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
 class JumpGame {
     public boolean canJump(int[] nums) {
         int n = nums.length;
