@@ -1,3 +1,12 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 public class SymmetricTree {
     private boolean helper(TreeNode a, TreeNode b){
         if (a == null && b == null)
